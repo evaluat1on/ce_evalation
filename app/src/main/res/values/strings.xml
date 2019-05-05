@@ -1,8 +1,16 @@
 <resources>
+
+    <string name="app_name1">สรุปผลการประเมิน</string>
+
     <string name="app_name">ce_evaluation</string>
 
+<<<<<<< HEAD
     <string-array name="names">
         <item>2015</item>
         <item>2016</item>
     </string-array>
+=======
+
+
+>>>>>>> 7a986630ac1a0515d6562c44145da9b9add16b53
 </resources>
