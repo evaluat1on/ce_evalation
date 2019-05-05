@@ -11,16 +11,26 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".Dashboard">
         </activity>
+=======
+<<<<<<< HEAD
+        <activity android:name=".List_component">
+=======
+>>>>>>> 18792caab9fc18086fcf628078bc9ce55a586406
         <activity android:name=".List_subject">
         </activity>
         <activity android:name=".MainActivity">
+>>>>>>> a054c1f4c5a6a4c3c14d17e4fcf459423d397845
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
