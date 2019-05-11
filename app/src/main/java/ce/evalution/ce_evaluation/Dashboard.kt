@@ -37,7 +37,7 @@ class Dashboard : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.39.17/TSP59/School/index.php/srp/eval/Dashboard/student_ajax"
+        val url = "http://10.80.87.79:7777/get_year"
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(
             Request.Method.GET, url,
@@ -45,7 +45,7 @@ class Dashboard : AppCompatActivity() {
                 // Display the first 500 characters of the response string.
                 val json = JSONArray(response)
                 (0 until json.length()).mapTo(BookList){
-                    Student_dash(json.getJSONObject(it).getString("count_std"))
+                    Student_dash(json.getJSONObject(it).getString("rspAdY"))
                 }
                 textView.text = "Response is: ${
                 BookList[0].author
