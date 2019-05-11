@@ -2,15 +2,32 @@ package ce.evalution.ce_evaluation.evaluation
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import ce.evalution.ce_evaluation.Filter.Year
 import ce.evalution.ce_evaluation.R
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import org.json.JSONArray
 
 class Filter_subject : AppCompatActivity() {
-
+    var Year = ArrayList<Year>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_subject)
 
+        val url = "http://192.168.1.13:1235/get_year"
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            Response.Listener<String> { response ->
+                val json = JSONArray(response)
+                (0 until json.length()).mapTo(Year){
+                    Year(json.getJSONObject(it).getString("year"))
+                }
+
+            },
+            Response.ErrorListener {/* title.text = "That didn't work!" */}
+        )
 
 
     }

@@ -47,13 +47,11 @@ class Dashboard : AppCompatActivity() {
                     Student_dash(json.getJSONObject(it).getString("count_std"))
                 }
                 textView.text = "Response is: ${
-                BookList[0].rspAdY
+                BookList[0].std
                 }"
 
                 // recycler_list.layoutManager = LinearLayoutManager(this)
                 //  recycler_list.adapter = Adapter(this,BookList)
-
-
             },
             Response.ErrorListener {/* title.text = "That didn't work!" */}
         )
