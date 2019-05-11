@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import ce.evalution.ce_evaluation.dashboard.Dashboard
 
 class MainActivity : AppCompatActivity() {
     private var btn_dash: Button?=null
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         btn_dash = findViewById(R.id.dashboard) as Button
 
         btn_dash!!.setOnClickListener{
-            val intent = Intent(this,Dashboard::class.java)
+            val intent = Intent(this, Dashboard::class.java)
             startActivity(intent)
         }
     }

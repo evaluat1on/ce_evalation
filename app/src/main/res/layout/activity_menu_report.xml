@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Menu_report">
+        tools:context=".result.Menu_report">
     <ImageView
             android:layout_width="123dp"
             android:layout_height="88dp" app:srcCompat="@drawable/estimate" android:id="@+id/imageView3"

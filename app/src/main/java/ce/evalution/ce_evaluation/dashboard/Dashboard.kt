@@ -1,4 +1,4 @@
-package ce.evalution.ce_evaluation
+package ce.evalution.ce_evaluation.dashboard
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -8,14 +8,13 @@ import com.android.volley.toolbox.BasicNetwork
 import com.android.volley.toolbox.DiskBasedCache
 import com.android.volley.toolbox.HurlStack
 import org.json.JSONArray
-import android.support.v7.widget.LinearLayoutManager
+import ce.evalution.ce_evaluation.R
 
 import com.android.volley.Request
 
 import com.android.volley.Response
 
 import com.android.volley.toolbox.StringRequest
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class Dashboard : AppCompatActivity() {

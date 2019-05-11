@@ -1,11 +1,8 @@
-package ce.evalution.ce_evaluation
+package ce.evalution.ce_evaluation.evaluation
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.activity_filter_subject.*
+import ce.evalution.ce_evaluation.R
 
 class Filter_subject : AppCompatActivity() {
 
