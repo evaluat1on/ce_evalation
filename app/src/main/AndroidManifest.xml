@@ -23,16 +23,15 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".Report_subject"/>
         <activity android:name=".Report_student"/>
-        <activity android:name=".Dashboard">
+        <activity android:name=".Dashboard"/>
+        <activity android:name=".List_component"/>
+        <activity android:name=".List_subject"/>
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>>
-        <activity android:name=".List_component"/>
-        <activity android:name=".List_subject"/>
-        <activity android:name=".Login">
         </activity>
     </application>
 
