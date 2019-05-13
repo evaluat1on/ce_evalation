@@ -3,6 +3,7 @@ package ce.evalution.ce_evaluation.dashboard
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import ce.evalution.ce_evaluation.Api_controller
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.BasicNetwork
 import com.android.volley.toolbox.DiskBasedCache
@@ -24,6 +25,8 @@ class Dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        var Baseurl = Api_controller()
 
         val textView = findViewById<TextView>(R.id.sample)
 
