@@ -23,11 +23,6 @@ import org.json.JSONObject
 import android.widget.AdapterView
 
 
-
-
-
-
-
 class Filter_subject : AppCompatActivity() {
     var Year = ArrayList<Year>()
 
@@ -61,10 +56,6 @@ class Filter_subject : AppCompatActivity() {
                 println(list);
 
 
-              //  val linearLayout = findViewById<LinearLayout>(R.id.rootContainer)
-
-             //   val spinner = Spinner(this)
-              //  spinner.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
                 val spinner = findViewById<Spinner>(R.id.spinnerTerm)
 
