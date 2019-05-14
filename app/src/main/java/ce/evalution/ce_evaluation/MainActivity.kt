@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btn_dash = findViewById(R.id.dashboard) as Button
 
         btn_dash!!.setOnClickListener{
             val intent = Intent(this, Dashboard::class.java)
