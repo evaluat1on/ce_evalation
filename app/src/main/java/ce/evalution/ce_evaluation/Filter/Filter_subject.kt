@@ -1,16 +1,12 @@
-package ce.evalution.ce_evaluation.evaluation
+package ce.evalution.ce_evaluation.Filter
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.Spinner
-import ce.evalution.ce_evaluation.Filter.Year
 import ce.evalution.ce_evaluation.R
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
-import kotlinx.android.synthetic.main.activity_filter_subject.*
 import org.json.JSONArray
 
 class Filter_subject : AppCompatActivity() {
@@ -26,16 +22,17 @@ class Filter_subject : AppCompatActivity() {
         val url = "http://10.80.79.210:1235/get_year"
         val Year_data = StringRequest(
             Request.Method.GET, url,
-            Response.Listener<String> { response ->
+            Response.Listener<String> {
+                    response ->
                 val json = JSONArray(response)
                 (0 until json.length()).mapTo(Year){
                     Year(json.getJSONObject(it).getString("rspAdY"))
                 }
-                spinner.
+
             },
             Response.ErrorListener {  "That didn't work!" }
         )
-        println(Year_data)
+       // println(Year_data)
 
 
 

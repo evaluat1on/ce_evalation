@@ -39,24 +39,24 @@ class Dashboard : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.39.17/TSP59/School/index.php/srp/eval/Dashboard/student_ajax"
+        val url = "http://10.80.78.161:80/get_course_count"
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->
                 // Display the first 500 characters of the response string.
-                val json = JSONArray(response)
-                (0 until json.length()).mapTo(BookList){
-                    Student_dash(json.getJSONObject(it).getString("count_std"))
-                }
-                textView.text = "Response is: ${
-                BookList[0].std
-                }"
-
+                //val json = JSONArray(response)
+                //(0 until json.length()).mapTo(BookList){
+                 //   Student_dash(json.getJSONObject(it).getString("count_std"))
+               // }
+               // textView.text = "Response is: ${
+               // BookList[0].std
+                //}"
+                textView.text = "res"
                 // recycler_list.layoutManager = LinearLayoutManager(this)
                 //  recycler_list.adapter = Adapter(this,BookList)
             },
-            Response.ErrorListener {/* title.text = "That didn't work!" */}
+            Response.ErrorListener { textView.text = "That didn't work!" }
         )
         stringRequest.tag = TAG
         // Add the request to the RequestQueue.
