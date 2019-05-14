@@ -30,7 +30,8 @@ import android.widget.AdapterView
 
 class Filter_subject : AppCompatActivity() {
     var Year = ArrayList<Year>()
-
+    var term = ArrayList<term>()
+    val jsonObject = JSONObject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_subject)
@@ -52,66 +53,73 @@ class Filter_subject : AppCompatActivity() {
                     Year(json.getJSONObject(it).getString("rspAdY"))
                 }
 
-
-
                 val list = ArrayList<String>()
                 for (i in 0 until json.length()) {
                     list.add(json.getJSONObject(i).getString("rspAdY"))
                 }
                 println(list);
-
-
-              //  val linearLayout = findViewById<LinearLayout>(R.id.rootContainer)
-
-             //   val spinner = Spinner(this)
-              //  spinner.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-
-                val spinner = findViewById<Spinner>(R.id.spinnerTerm)
-
-//
+                val spinner = findViewById<Spinner>(R.id.spinnerYear)
                 val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, list)
                 spinner.adapter = arrayAdapter
 
-                val text = spinner.getSelectedItem().toString()
-                println(text)
-
-
                 spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
-                        println("82312837123781232721823728")
-                    }
+                        val text = spinner.getSelectedItem().toString()
+                        jsonObject.put("year_number",text)
+                        get_term(text)
 
+                    }
                     override fun onNothingSelected(parent: AdapterView<*>) {
                         // Another interface callback
                     }
                 }
-
-
-
-
-
             },
             Response.ErrorListener {/* title.text = "That didn't work!" */}
         )
         queue.add(Year_data)
-         // get_term("2560");
+
 
     }
-
     fun get_term(year:String){
-        val jsonObject = JSONObject()
-        jsonObject.put("year_number",2560)
-        jsonObject.put("term_number",1)
-        jsonObject.put("study_year",4)
-        jsonObject.put("curId",2)
+        val BaseUrl = Api_controller()
+        val queue = Volley.newRequestQueue(this)
+        val url = BaseUrl.BaseUrl+"/get_term"
 
-        // Volley post request with parameters
-      //  val request = JsonObjectRequest(Request.Method.POST,url,jsonObject,
-      //      Response.Listener { response ->
+        val json = JSONObject()
+        json.put("year_number",year)
 
-         //   }, Response.ErrorListener{
+        val term = JsonObjectRequest(
 
-            //})
-        //queue.add(request)
+            Request.Method.PUT, url,json,
+            Response.Listener<JSONObject> { response ->
+
+                println("nithi atsiri")
+            },
+            Response.ErrorListener {
+                println("12312312312312312312312312312")
+            }
+        )
+        queue.add(term)
+/*
+        val list = ArrayList<String>()
+        for (i in 0 until json.length()) {
+            list.add(json.getJSONObject(i).getString("rspTmId"))
+        }
+        println(list);
+        val spinner = findViewById<Spinner>(R.id.spinnerTerm)
+        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, list)
+        spinner.adapter = arrayAdapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
+                val text = spinner.getSelectedItem().toString()
+                jsonObject.put("year_number",text)
+                get_term(text)
+
+            }
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // Another interface callback
+            }
+        }*/
     }
 }
