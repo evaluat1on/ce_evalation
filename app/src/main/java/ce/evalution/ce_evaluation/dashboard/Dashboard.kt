@@ -5,17 +5,13 @@ import android.os.Bundle
 import android.widget.TextView
 import ce.evalution.ce_evaluation.Api_controller
 import com.android.volley.RequestQueue
-import com.android.volley.toolbox.BasicNetwork
-import com.android.volley.toolbox.DiskBasedCache
-import com.android.volley.toolbox.HurlStack
 import org.json.JSONArray
 import ce.evalution.ce_evaluation.R
 
 import com.android.volley.Request
 
 import com.android.volley.Response
-
-import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.*
 
 
 class Dashboard : AppCompatActivity() {
@@ -38,29 +34,22 @@ class Dashboard : AppCompatActivity() {
         val requestQueue = RequestQueue(cache, network).apply {
             start()
         }
-
-        val url = "http://10.80.39.17/TSP59/School/index.php/srp/eval/Dashboard/student_ajax"
+      //  val queue = Volley.newRequestQueue(this)
+        val url = "http://10.80.76.113:7777/get_all"
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->
-                // Display the first 500 characters of the response string.
-                val json = JSONArray(response)
-                (0 until json.length()).mapTo(BookList){
-                    Student_dash(json.getJSONObject(it).getString("count_std"))
-                }
-                textView.text = "Response is: ${
-                BookList[0].std
-                }"
 
+                textView.text = "test"
                 // recycler_list.layoutManager = LinearLayoutManager(this)
                 //  recycler_list.adapter = Adapter(this,BookList)
             },
-            Response.ErrorListener {/* title.text = "That didn't work!" */}
+            Response.ErrorListener {textView.text = "That didn't work!"}
         )
         stringRequest.tag = TAG
         // Add the request to the RequestQueue.
-        requestQueue?.add(stringRequest)
+        requestQueue.add(stringRequest)
     }
 
     override fun onStop() {

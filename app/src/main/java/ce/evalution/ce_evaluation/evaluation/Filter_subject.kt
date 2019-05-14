@@ -20,7 +20,7 @@ class Filter_subject : AppCompatActivity() {
         setContentView(R.layout.activity_filter_subject)
 
 
-        val url = "http://192.168.1.13:1235/get_year"
+        val url = "http://10.80.85.160:7777/get_all"
         val Year_data = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->
