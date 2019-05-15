@@ -13,15 +13,19 @@ class Menu_teacher : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_teacher)
 
+        val actionbar = supportActionBar
+
+        //set back button
+        actionbar!!.setDisplayHomeAsUpEnabled(true)
+
         CardViewId.setOnClickListener{
             val intent = Intent(this, Filter_subject::class.java)
             startActivity(intent)
         }
-        CardViewId2.setOnClickListener{
-            val intent = Intent(this,Menu_report::class.java)
-            startActivity(intent)
-        }
     }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
