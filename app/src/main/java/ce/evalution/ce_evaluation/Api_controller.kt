@@ -4,6 +4,6 @@ class Api_controller {
     var BaseUrl: String
 
     constructor() {
-        this.BaseUrl = "http://10.80.79.210:1235"
+        this.BaseUrl = "http://10.70.20.148:1235"
     }
 }

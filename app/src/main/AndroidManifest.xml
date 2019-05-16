@@ -12,6 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
+        <activity android:name=".result.Choose_grade_subject">
+        </activity>
         <activity android:name=".Update_Grade">
         </activity>
         <activity android:name=".Menu_teacher">

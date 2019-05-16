@@ -22,6 +22,10 @@ class Menu_teacher : AppCompatActivity() {
             val intent = Intent(this, Filter_subject::class.java)
             startActivity(intent)
         }
+        CardViewId2.setOnClickListener{
+            val intent = Intent(this, Menu_report::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
