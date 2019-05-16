@@ -13,12 +13,14 @@ class Menu_report : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_report)
 
-        CardViewId.setOnClickListener{
-            val intent = Intent(this, Report_student::class.java)
-            startActivity(intent)
-        }
+        //รอเมย์ ทำ layout
+      //  CardViewId.setOnClickListener{
+      //      val intent = Intent(this, Report_student::class.java)
+       //     startActivity(intent)
+       // }
+
         CardViewId2.setOnClickListener{
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Choose_grade_subject::class.java)
             startActivity(intent)
         }
     }

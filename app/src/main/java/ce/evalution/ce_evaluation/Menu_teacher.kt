@@ -22,6 +22,7 @@ class Menu_teacher : AppCompatActivity() {
             val intent = Intent(this, Filter_subject::class.java)
             startActivity(intent)
         }
+        // จริงแล้วก่อนไปหน้า Menu report ครรไปที่หน้า filter ก่อนอาจจะต้องสร้างใหม่มาอีกอัน
         CardViewId2.setOnClickListener{
             val intent = Intent(this, Menu_report::class.java)
             startActivity(intent)
