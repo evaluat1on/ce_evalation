@@ -20,6 +20,7 @@ class Menu_report : AppCompatActivity() {
         var stdy  =  intent.getStringExtra("study_year").toString()
 
         var curi  =  intent.getStringExtra("curId").toString()
+        var coId  =  intent.getStringExtra("coId").toString()
 
 
         //รอเมย์ ทำ layout
@@ -35,6 +36,7 @@ class Menu_report : AppCompatActivity() {
             intent.putExtra("term_number",term )
             intent.putExtra("study_year",stdy )
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             startActivity(intent)
 
 

@@ -20,6 +20,7 @@ class Choose_grade_subject : AppCompatActivity() {
         var stdy  =  intent.getStringExtra("study_year").toString()
 
         var curi  =  intent.getStringExtra("curId").toString()
+        var coId  =  intent.getStringExtra("coId").toString()
 
 
 
@@ -33,6 +34,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "4")
             startActivity(intent)
         }
@@ -42,6 +44,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "3.5")
             startActivity(intent)
 
@@ -52,6 +55,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "3")
             startActivity(intent)
 
@@ -62,6 +66,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "2.5")
             startActivity(intent)
 
@@ -72,6 +77,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "2")
             startActivity(intent)
         }
@@ -81,6 +87,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "1.5")
             startActivity(intent)
         }
@@ -90,6 +97,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "1")
             startActivity(intent)
 
@@ -100,6 +108,7 @@ class Choose_grade_subject : AppCompatActivity() {
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
             intent.putExtra("curId", curi)
+            intent.putExtra("coId", coId)
             intent.putExtra("grade", "0")
             startActivity(intent)
         }

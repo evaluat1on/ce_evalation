@@ -28,7 +28,7 @@ class Report_subject : AppCompatActivity() {
         var curi  =  intent.getStringExtra("curId").toString()
 
         var Grade  =  intent.getStringExtra("grade").toString()
-
+        var coId  =  intent.getStringExtra("coId").toString()
 
 
         val BaseUrl = Api_controller()
@@ -64,7 +64,7 @@ class Report_subject : AppCompatActivity() {
                 params["term_number"] = term;
                 params["study_year"] = stdy;
                 params["curId"] = curi;
-                params["coId"] = "2";
+                params["coId"] = coId;
                 params["grade"] = Grade;
 
                 return params

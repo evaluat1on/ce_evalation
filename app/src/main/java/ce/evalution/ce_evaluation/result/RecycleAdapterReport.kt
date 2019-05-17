@@ -13,6 +13,7 @@ import android.widget.Toast
 import ce.evalution.ce_evaluation.Filter.Subject
 import ce.evalution.ce_evaluation.R
 import ce.evalution.ce_evaluation.result.Choose_grade_subject
+import ce.evalution.ce_evaluation.result.Menu_report
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_subject.view.*
 
@@ -37,7 +38,7 @@ class RecycleAdapterReport(val context: Context,
             var text = "Subject "+items[mViewHolder.layoutPosition].crsName
             Toast.makeText(context,text, Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(mView.context, Choose_grade_subject::class.java)
+            val intent = Intent(mView.context, Menu_report::class.java)
             intent.putExtra("coId",items[mViewHolder.layoutPosition].coId)
 
             intent.putExtra("year_number", year)
