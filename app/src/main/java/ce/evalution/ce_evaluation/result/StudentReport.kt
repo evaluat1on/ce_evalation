@@ -7,13 +7,13 @@ class StudentReport {
     var pfName:String
     var stdName:String
     var stdSurname:String
-    var ss_grade:String
+    var number_grade:String
 
-    constructor(stdCode:String,pfName:String,stdName:String,stdSurname:String,ss_grade:String){
+    constructor(stdCode:String,pfName:String,stdName:String,stdSurname:String,number_grade:String){
         this.stdCode = stdCode
         this.pfName = pfName
         this.stdName = stdName
         this.stdSurname = stdSurname
-        this.ss_grade = ss_grade
+        this.number_grade = number_grade
     }
 }

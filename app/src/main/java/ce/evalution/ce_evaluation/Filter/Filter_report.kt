@@ -14,6 +14,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONArray
 import org.json.JSONObject
 import ce.evalution.ce_evaluation.VolleySingleton
+import ce.evalution.ce_evaluation.result.Menu_report
 import ce.evalution.ce_evaluation.result.Subject_report
 
 
@@ -72,7 +73,7 @@ class Filter_report : AppCompatActivity() {
 //          startActivity(intent)
 
         btn_sub!!.setOnClickListener{
-            val intent = Intent(this, Subject_report::class.java)
+            val intent = Intent(this, Menu_report::class.java)
             intent.putExtra("year_number", jsonObject["year_number"].toString())
             intent.putExtra("term_number", jsonObject["term_number"].toString())
             intent.putExtra("study_year", jsonObject["study_year"].toString())

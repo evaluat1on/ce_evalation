@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ce.evalution.ce_evaluation.R
-
-
+import kotlinx.android.synthetic.main.item_student_report.view.*
 import kotlinx.android.synthetic.main.item_subject_report.view.*
+import kotlinx.android.synthetic.main.item_subject_report.view.count_no
 
-class RecycleAdapterOnSubject(val context: Context,
-                              val items : ArrayList<Subjectcount>
+class RecyclerAdapterstdReport(val context: Context,
+                              val items : ArrayList<StudentReport>
 ) : RecyclerView.Adapter<ViewHolder>()
 {
     // Gets the number of animals in the list
@@ -23,7 +23,7 @@ class RecycleAdapterOnSubject(val context: Context,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val mView = LayoutInflater
             .from(context)
-            .inflate(R.layout.item_subject_report,parent,false)
+            .inflate(R.layout.item_student_report,parent,false)
         val mViewHolder = ViewHolder(mView)
 
         mView.setOnClickListener{
@@ -33,17 +33,12 @@ class RecycleAdapterOnSubject(val context: Context,
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.textView14.text = items[p1].crsName
-        p0.textView13.text = items[p1].crsCode
+        p0.textView14.text = items[p1].pfName+items[p1].stdName+" "+items[p1].stdSurname
+        p0.textView13.text = items[p1].stdCode
         p0.textView15.text = "จำนวน: "+items[p1].number_grade
 
 
 
     }
 
-}
-class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    val textView14 = view.subject_name
-    val textView13 = view.subject_id
-    val textView15 = view.count_no
 }

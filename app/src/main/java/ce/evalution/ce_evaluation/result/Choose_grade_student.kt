@@ -6,12 +6,11 @@ import android.os.Bundle
 import ce.evalution.ce_evaluation.R
 import kotlinx.android.synthetic.main.activity_choose_grade_subject.*
 
-class Choose_grade_subject : AppCompatActivity() {
+class Choose_grade_student : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_grade_subject)
-
+        setContentView(R.layout.activity_choose_grade_student)
         var intent = getIntent()
         var year  =  intent.getStringExtra("year_number").toString()
         var term  =  intent.getStringExtra("term_number").toString()
@@ -23,9 +22,8 @@ class Choose_grade_subject : AppCompatActivity() {
         val actionbar = supportActionBar
 
         actionbar!!.setDisplayHomeAsUpEnabled(true)
-
         CardViewId_A.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -34,7 +32,7 @@ class Choose_grade_subject : AppCompatActivity() {
             startActivity(intent)
         }
         CardViewId_Bplus.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -44,7 +42,7 @@ class Choose_grade_subject : AppCompatActivity() {
 
         }
         CardViewId_B.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -54,7 +52,7 @@ class Choose_grade_subject : AppCompatActivity() {
 
         }
         CardViewId_Cplus.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -64,7 +62,7 @@ class Choose_grade_subject : AppCompatActivity() {
 
         }
         CardViewId_C.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -73,7 +71,7 @@ class Choose_grade_subject : AppCompatActivity() {
             startActivity(intent)
         }
         CardViewId_Dplus.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -82,7 +80,7 @@ class Choose_grade_subject : AppCompatActivity() {
             startActivity(intent)
         }
         CardViewId_D.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)
@@ -92,7 +90,7 @@ class Choose_grade_subject : AppCompatActivity() {
 
         }
         CardViewId_F.setOnClickListener {
-            val intent = Intent(this, Report_subject::class.java)
+            val intent = Intent(this, Report_student::class.java)
             intent.putExtra("year_number", year)
             intent.putExtra("term_number", term)
             intent.putExtra("study_year", stdy)

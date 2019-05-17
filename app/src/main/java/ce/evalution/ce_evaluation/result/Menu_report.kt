@@ -13,21 +13,21 @@ class Menu_report : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_report)
         var intent = getIntent()
-        var    year  =  intent.getStringExtra("year_number").toString()
-
+        var year  =  intent.getStringExtra("year_number").toString()
         var term  =  intent.getStringExtra("term_number").toString()
-
         var stdy  =  intent.getStringExtra("study_year").toString()
-
         var curi  =  intent.getStringExtra("curId").toString()
-        var coId  =  intent.getStringExtra("coId").toString()
 
 
-        //รอเมย์ ทำ layout
-      //  CardViewId.setOnClickListener{
-      //      val intent = Intent(this, Report_student::class.java)
-       //     startActivity(intent)
-       // }
+
+       CardViewId.setOnClickListener{
+           val intent = Intent(this, Choose_grade_student::class.java)
+           intent.putExtra("year_number",year )
+           intent.putExtra("term_number",term )
+           intent.putExtra("study_year",stdy )
+           intent.putExtra("curId", curi)
+           startActivity(intent)
+        }
 
         CardViewId2.setOnClickListener{
 
@@ -36,7 +36,6 @@ class Menu_report : AppCompatActivity() {
             intent.putExtra("term_number",term )
             intent.putExtra("study_year",stdy )
             intent.putExtra("curId", curi)
-            intent.putExtra("coId", coId)
             startActivity(intent)
 
 

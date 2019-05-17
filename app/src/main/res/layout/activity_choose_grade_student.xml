@@ -6,7 +6,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".result.Choose_grade_subject" android:background="#F0ECF4">
+        tools:context=".result.Choose_grade_student" android:background="#F0ECF4">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
